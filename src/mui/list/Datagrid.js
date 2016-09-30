@@ -22,7 +22,7 @@ const Datagrid = ({ resource, children, ids, data, currentSort, basePath, select
                 ))}
             </TableRow>
         </TableHeader>
-        <TableBody showRowHover displayRowCheckbox={selectable}>
+        <TableBody className="datagrid-body" showRowHover displayRowCheckbox={selectable}>
             {ids.map(id => (
                 <TableRow key={id}>
                     {React.Children.toArray(children).map(field => (
