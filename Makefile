@@ -14,13 +14,15 @@ build:
 doc:
 	@cd docs && jekyll server . --watch
 
-test:
+test: test-unit test-e2e
+
+test-unit:
 	@NODE_ENV=test ./node_modules/.bin/mocha \
 		--require ignore-styles \
 		--compilers js:babel-register \
 		'./src/**/*.spec.js'
 
-test-watch:
+test-unit-watch:
 	@NODE_ENV=test ./node_modules/.bin/mocha \
 		--require ignore-styles \
 		--compilers js:babel-register \
