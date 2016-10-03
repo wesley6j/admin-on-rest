@@ -26,7 +26,7 @@ const Datagrid = ({ resource, children, ids, data, currentSort, basePath, select
             {ids.map(id => (
                 <TableRow key={id}>
                     {React.Children.toArray(children).map(field => (
-                        <TableRowColumn key={`${id}-${field.props.source}`} data-source={field.props.source}>
+                        <TableRowColumn className={`column-${field.props.source}`} key={`${id}-${field.props.source}`}>
                             <field.type {...field.props} record={data[id]} basePath={basePath} resource={resource} />
                         </TableRowColumn>
                     ))}

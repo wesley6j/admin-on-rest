@@ -13,7 +13,7 @@ injectTapEventPlugin();
 
 const Layout = ({ isLoading, children, route, title, theme }) => {
     const Title = <Link to="/" style={{ color: '#fff', textDecoration: 'none' }}>{title}</Link>;
-    const RightElement = isLoading ? <CircularProgress color="#fff" size={0.5} /> : <span />;
+    const RightElement = isLoading ? <CircularProgress className="app-loader" color="#fff" size={0.5} /> : <span />;
     const muiTheme = getMuiTheme(theme);
 
     return (
